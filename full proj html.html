@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baking World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+        }
+        nav {
+            background-color: #0288d1;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        h1, h2 {
+            color: #01579b;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+    </style>
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.style.display = 'none');
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('about')">About</a>
+        <a href="#" onclick="showPage('recipes')">Recipes</a>
+        <a href="#" onclick="showPage('blog')">Blog</a>
+        <a href="#" onclick="showPage('contact')">Contact</a>
+    </nav>
+
+    <div class="content">
+        <!-- Home Page -->
+        <div id="home" class="page">
+            <h1>Welcome to My Baking World</h1>
+            <p>Explore delightful recipes, helpful tips, and baking inspiration to sweeten your day.</p>
+            <p>Recipe of the week: <strong>Chocolate Lava Cake!</strong></p>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page" style="display:none;">
+            <h2>About Us</h2>
+            <p>At My Baking World, we believe baking is more than just cooking—it's an art. Join us on this sweet journey!</p>
+        </div>
+
+        <!-- Recipes Page -->
+        <div id="recipes" class="page" style="display:none;">
+            <h2>Our Recipes</h2>
+            <ul>
+                <li>Chocolate Cake</li>
+                <li>Banana Bread</li>
+                <li>French Macarons</li>
+            </ul>
+        </div>
+
+        <!-- Blog Page -->
+        <div id="blog" class="page" style="display:none;">
+            <h2>Baking Blog</h2>
+            <p>Top tips for perfect pie crusts, explore new baking trends, and share your baking stories.</p>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page" style="display:none;">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+                <textarea id="message" name="message" rows="4" cols="30" placeholder="Your message..."></textarea><br><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
